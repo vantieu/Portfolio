@@ -7,7 +7,7 @@
 
   <title>Nguyễn Nhan Đức | Unity Game Developer</title>
 
-  <!-- Font -->
+  <!-- Google Font -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -168,12 +168,25 @@
       border-radius: 20px;
       border: 1px solid transparent;
       transition: 0.3s;
+      animation: fadeUp 1s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
       border: 1px solid #60a5fa;
       box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .about-content,
@@ -217,6 +230,11 @@
       margin-bottom: 20px;
       height: 220px;
       object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.03);
     }
 
     .project-card h3 {
@@ -340,7 +358,7 @@
           Xem dự án
         </a>
 
-        <a href="https://github.com/" class="btn btn-outline">
+        <a href="https://github.com/vantieu" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
           GitHub
         </a>
 
@@ -361,7 +379,7 @@
     <h2 class="title">Giới thiệu bản thân</h2>
 
     <p class="subtitle">
-      Thông tin cơ bản về mình
+      Thông tin cơ bản về em
     </p>
 
     <div class="about-content">
@@ -426,6 +444,28 @@
 
   </section>
 
+  <!-- Tech Stack -->
+
+  <section>
+
+    <h2 class="title">Công nghệ sử dụng</h2>
+
+    <p class="subtitle">
+      Công cụ và phần mềm sử dụng trong quá trình phát triển
+    </p>
+
+    <div class="skills">
+
+      <div class="skill">Unity Engine</div>
+      <div class="skill">Visual Studio</div>
+      <div class="skill">GitHub Desktop</div>
+      <div class="skill">Photoshop</div>
+      <div class="skill">SQL Server</div>
+
+    </div>
+
+  </section>
+
   <!-- Projects -->
 
   <section id="projects">
@@ -453,11 +493,11 @@
 
         <!-- <div class="project-buttons">
 
-          <a href="#" target="_blank" class="btn">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn">
             GitHub
           </a>
 
-          <a href="#" target="_blank" class="btn btn-outline">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
             Play Game
           </a>
 
@@ -480,11 +520,11 @@
 
         <div class="project-buttons">
 
-          <a href="https://github.com/vantieu/Hollow-Soul" target="_blank" class="btn">
+          <a href="https://github.com/vantieu" target="_blank" rel="noopener noreferrer" class="btn">
             GitHub
           </a>
 
-          <a href="Image/King_Game_Build.rar" target="_blank" class="btn btn-outline">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
             Play Game
           </a>
 
@@ -507,11 +547,13 @@
 
         <div class="project-buttons">
 
-          <a href="https://github.com/vantieu/Website-Hollow-Soul" target="_blank" class="btn">
+          <a href="https://github.com/vantieu/Website-Hollow-Soul" target="_blank" rel="noopener noreferrer"
+            class="btn">
             GitHub
           </a>
 
-          <a href="https://vantieu.github.io/Website-Hollow-Soul/" target="_blank" class="btn btn-outline">
+          <a href="https://vantieu.github.io/Website-Hollow-Soul/" target="_blank" rel="noopener noreferrer"
+            class="btn btn-outline">
             Live Demo
           </a>
 
@@ -553,20 +595,41 @@
 
         <p>
           Người chơi có thể thu thập vũ khí,
-          nâng cấp sức mạnh và vượt qua nhiều thử thách
+          nâng cấp kỹ năng và vượt qua nhiều thử thách
           trong các màn chơi khác nhau.
         </p>
 
         <br>
 
         <p>
-          <strong>Gameplay:</strong><br><br>
+          Game tập trung vào trải nghiệm combat nhanh,
+          né đòn, chiến đấu với Boss
+          và khám phá các khu vực bí ẩn.
+        </p>
 
-          - Combat 2D <br>
+        <br>
+
+        <p>
+          <strong>Gameplay Features:</strong><br><br>
+
+          - Combat 2D System <br>
           - Enemy AI <br>
           - Boss Battle <br>
-          - Thu thập vật phẩm <br>
-          - Kho vũ khí
+          - Inventory System <br>
+          - Weapon Collection <br>
+          - UI/UX System
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Vai trò thực hiện:</strong><br><br>
+
+          - Thiết kế gameplay bằng Unity <br>
+          - Xây dựng UI/UX <br>
+          - Thiết kế Enemy AI <br>
+          - Làm hệ thống Inventory <br>
+          - Thiết kế Boss Battle
         </p>
 
       </div>
@@ -596,13 +659,34 @@
         <br>
 
         <p>
-          <strong>Gameplay:</strong><br><br>
+          Hệ thống gameplay tập trung vào combat,
+          di chuyển platformer
+          và phát triển kỹ năng nhân vật.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Gameplay Features:</strong><br><br>
 
           - Combat System <br>
           - Enemy AI <br>
           - Platformer Movement <br>
           - Skill System <br>
+          - Boss Fight <br>
           - UI/UX hiện đại
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Vai trò thực hiện:</strong><br><br>
+
+          - Gameplay Programming <br>
+          - Thiết kế Combat System <br>
+          - Xây dựng Enemy AI <br>
+          - Thiết kế UI/UX <br>
+          - Làm Website giới thiệu game
         </p>
 
       </div>
@@ -618,19 +702,19 @@
     <h2 class="title">Liên hệ</h2>
 
     <p class="subtitle">
-      Thông tin liên hệ của mình
+      Thông tin liên hệ của em
     </p>
 
     <div class="contact-box">
 
       <p>
         <i class="fa-solid fa-envelope"></i>
-        nguyennhanduc@gmail.com
+        ducnn.gamedev@gmail.com
       </p>
 
       <p>
         <i class="fa-brands fa-github"></i>
-        github.com/yourgithub
+        github.com/vantieu
       </p>
 
       <p>
