@@ -27,7 +27,15 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f172a;
+      background:
+        radial-gradient(circle at top right,
+          rgba(59, 130, 246, 0.25),
+          transparent 35%),
+        radial-gradient(circle at bottom left,
+          rgba(96, 165, 250, 0.15),
+          transparent 35%),
+        #0f172a;
+
       color: white;
       overflow-x: hidden;
     }
@@ -42,9 +50,17 @@
     }
 
     .title {
-      font-size: 42px;
+
+      font-size: 48px;
+
       margin-bottom: 15px;
-      color: #60a5fa;
+
+      background: linear-gradient(90deg,
+          #60a5fa,
+          #3b82f6);
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
@@ -60,11 +76,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       position: fixed;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(10px);
+
+      background: rgba(15, 23, 42, 0.7);
+
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .logo {
@@ -102,13 +123,19 @@
     }
 
     .hero-text h1 {
-      font-size: 62px;
-      line-height: 1.2;
+      font-size: 70px;
+      line-height: 1.15;
       margin-bottom: 20px;
     }
 
     .hero-text span {
-      color: #60a5fa;
+      background: linear-gradient(90deg,
+          #60a5fa,
+          #3b82f6,
+          #93c5fd);
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero-text p {
@@ -125,17 +152,27 @@
     }
 
     .btn {
-      padding: 14px 30px;
-      border-radius: 12px;
-      background: #2563eb;
-      transition: 0.3s;
-      display: inline-block;
-      font-weight: 500;
+
+      padding: 14px 32px;
+
+      border-radius: 14px;
+
+      background: linear-gradient(135deg,
+          #2563eb,
+          #3b82f6);
+
+      transition: .3s;
+
+      font-weight: 600;
     }
 
     .btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-3px);
+
+      transform:
+        translateY(-4px) scale(1.03);
+
+      box-shadow:
+        0 10px 25px rgba(59, 130, 246, .35);
     }
 
     .btn-outline {
@@ -154,27 +191,50 @@
     }
 
     .hero-image img {
-      width: 350px;
+
+      width: 370px;
+
       border-radius: 30px;
-      border: 4px solid #2563eb;
-      box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
+
+      border: 4px solid #3b82f6;
+
+      box-shadow:
+        0 0 20px rgba(59, 130, 246, .3),
+        0 0 60px rgba(59, 130, 246, .4);
+
+      transition: .5s;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.03);
     }
 
     /* Cards */
 
     .card {
-      background: #1e293b;
+
+      background: rgba(30, 41, 59, .75);
+
+      backdrop-filter: blur(12px);
+
+      border-radius: 24px;
+
       padding: 30px;
-      border-radius: 20px;
-      border: 1px solid transparent;
-      transition: 0.3s;
-      animation: fadeUp 1s ease;
+
+      border: 1px solid rgba(255, 255, 255, .08);
+
+      transition: .4s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border: 1px solid #60a5fa;
-      box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
+
+      transform:
+        translateY(-10px) scale(1.02);
+
+      border-color: #60a5fa;
+
+      box-shadow:
+        0 15px 35px rgba(96, 165, 250, .15);
     }
 
     @keyframes fadeUp {
@@ -205,15 +265,28 @@
     }
 
     .skill {
-      padding: 12px 20px;
-      background: #2563eb;
+
+      padding: 12px 22px;
+
+      background: rgba(37, 99, 235, .15);
+
+      border: 1px solid rgba(96, 165, 250, .25);
+
       border-radius: 999px;
-      font-size: 14px;
-      transition: 0.3s;
+
+      color: #93c5fd;
+
+      transition: .3s;
     }
 
     .skill:hover {
-      transform: scale(1.05);
+
+      background: #2563eb;
+
+      color: white;
+
+      transform:
+        translateY(-3px) scale(1.05);
     }
 
     /* Projects */
@@ -225,16 +298,21 @@
     }
 
     .project-card img {
+
       width: 100%;
-      border-radius: 15px;
-      margin-bottom: 20px;
+
       height: 220px;
+
       object-fit: cover;
-      transition: 0.4s;
+
+      border-radius: 18px;
+
+      transition: .5s;
     }
 
     .project-card:hover img {
-      transform: scale(1.03);
+
+      transform: scale(1.05);
     }
 
     .project-card h3 {
@@ -257,10 +335,18 @@
     /* Contact */
 
     .contact-box {
-      background: #1e293b;
-      padding: 40px;
-      border-radius: 20px;
+
+      background: rgba(30, 41, 59, .8);
+
+      backdrop-filter: blur(12px);
+
+      padding: 45px;
+
+      border-radius: 24px;
+
       text-align: center;
+
+      border: 1px solid rgba(255, 255, 255, .08);
     }
 
     .contact-box p {
@@ -275,10 +361,16 @@
     }
 
     footer {
+
       text-align: center;
-      padding: 30px;
+
+      padding: 35px;
+
       color: #94a3b8;
-      border-top: 1px solid #1e293b;
+
+      border-top: 1px solid rgba(255, 255, 255, .08);
+
+      background: rgba(15, 23, 42, .5);
     }
 
     /* Responsive */
@@ -327,6 +419,7 @@
     <div class="nav-links">
       <a href="#about">Giới thiệu</a>
       <a href="#skills">Kỹ năng</a>
+      <a href="#experience">Hoạt động & Thành tích</a>
       <a href="#projects">Dự án</a>
       <a href="#story">Cốt truyện</a>
       <a href="#contact">Liên hệ</a>
@@ -341,7 +434,7 @@
     <div class="hero-text">
 
       <h1>
-        Xin chào, mình là
+        Xin chào, tôi là
         <span>Nguyễn Nhan Đức</span>
       </h1>
 
@@ -379,7 +472,7 @@
     <h2 class="title">Giới thiệu bản thân</h2>
 
     <p class="subtitle">
-      Thông tin cơ bản về em
+      Thông tin cơ bản về tôi
     </p>
 
     <div class="about-content">
@@ -446,7 +539,7 @@
 
   <!-- Tech Stack -->
 
-  <section>
+  <section id="">
 
     <h2 class="title">Công nghệ sử dụng</h2>
 
@@ -479,7 +572,6 @@
     <div class="projects">
 
       <!-- Project 1 -->
-
       <div class="card project-card">
 
         <img src="Image/SwordHero.jpg">
@@ -487,26 +579,27 @@
         <h3>Hero Sword 2D</h3>
 
         <p>
-          Thiết kế và triển khai gameplay bằng Unity.
-          Xây dựng UI/UX như điểm, hệ thống xu và kho vũ khí.
+          Game hành động 2D được phát triển bằng Unity.
+          <br><br>
+
+          <strong>Vai trò:</strong> Lập trình Gameplay, UI và hệ thống vật phẩm.
+          <br>
+
+          <strong>Công nghệ:</strong> Unity, C#, Animator, Tilemap.
+          <br>
+
+          <strong>Chức năng nổi bật:</strong>
+          <br>
+          • Hệ thống di chuyển, tấn công và nhảy.
+          <br>
+          • Hệ thống xu, điểm số và kho vũ khí.
+          <br>
+          • Quản lý màn chơi và giao diện người dùng.
         </p>
-
-        <!-- <div class="project-buttons">
-
-          <a href="#" target="_blank" rel="noopener noreferrer" class="btn">
-            GitHub
-          </a>
-
-          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            Play Game
-          </a>
-
-        </div> -->
 
       </div>
 
       <!-- Project 2 -->
-
       <div class="card project-card">
 
         <img src="Image/HollowSoul.jpg">
@@ -514,8 +607,26 @@
         <h3>Hollow Soul</h3>
 
         <p>
-          Phát triển gameplay, hệ thống chiến đấu,
-          AI quái vật và UI game bằng Unity và C#.
+          Game nhập vai hành động 2D lấy cảm hứng từ thể loại Souls-like.
+          <br><br>
+
+          <strong>Vai trò:</strong> UI/UX Designer & Unity Developer.
+          <br>
+
+          <strong>Công nghệ:</strong> Unity, C#, Canvas, Animator, Photoshop.
+          <br>
+
+          <strong>Đóng góp chính:</strong>
+          <br>
+          • Thiết kế và xây dựng giao diện Menu, Setting, HUD và Game Over.
+          <br>
+          • Lập trình hệ thống cài đặt âm thanh, đồ họa và điều khiển.
+          <br>
+          • Xây dựng hệ thống chỉ số nhân vật như HP, Stamina, Damage.
+          <br>
+          • Kết nối dữ liệu giữa gameplay và giao diện để cập nhật chỉ số theo thời gian thực.
+          <br>
+          • Tối ưu trải nghiệm người dùng và luồng tương tác trong game.
         </p>
 
         <div class="project-buttons">
@@ -524,16 +635,15 @@
             GitHub
           </a>
 
-          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            Play Game
+          <a href="https://github.com/vantieu/Hollow-Soul" target="_blank" rel="noopener noreferrer"
+            class="btn btn-outline">
+            Live Demo
           </a>
-
         </div>
 
       </div>
 
       <!-- Project 3 -->
-
       <div class="card project-card">
 
         <img src="Image/Web.png">
@@ -541,8 +651,22 @@
         <h3>Website Hollow Soul</h3>
 
         <p>
-          Thiết kế website giới thiệu game bằng HTML, CSS và JavaScript
-          với giao diện responsive hiện đại.
+          Website giới thiệu dự án game Hollow Soul.
+          <br><br>
+
+          <strong>Vai trò:</strong> Thiết kế giao diện và phát triển Front-End.
+          <br>
+
+          <strong>Công nghệ:</strong> HTML, CSS, JavaScript.
+          <br>
+
+          <strong>Chức năng nổi bật:</strong>
+          <br>
+          • Responsive trên PC, Tablet và Mobile.
+          <br>
+          • Hiệu ứng chuyển động và điều hướng mượt mà.
+          <br>
+          • Trình bày thông tin game, hình ảnh và trailer.
         </p>
 
         <div class="project-buttons">
@@ -702,7 +826,7 @@
     <h2 class="title">Liên hệ</h2>
 
     <p class="subtitle">
-      Thông tin liên hệ của em
+      Thông tin liên hệ của tôi
     </p>
 
     <div class="contact-box">
